@@ -7,7 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.swing.*;
+
 
 @Entity
 @Data
@@ -16,9 +16,9 @@ import javax.swing.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-    private Spring id;
-    private Spring username;
-    private Spring password;
+    private String id;
+    private String username;
+    private String password;
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    private User profile;
+    private Profile profile;
 }
