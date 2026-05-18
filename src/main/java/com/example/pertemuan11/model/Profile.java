@@ -7,7 +7,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.swing.*;
 
 @Entity
 @Data
@@ -17,9 +16,9 @@ import javax.swing.*;
 @NoArgsConstructor
 public class Profile {
     @Id
-    private Spring id;
-    private Spring nama;
-    private Spring alamat;
+    private String id;
+    private String nama;
+    private String alamat;
     @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
